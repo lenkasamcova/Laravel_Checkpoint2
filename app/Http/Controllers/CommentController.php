@@ -33,7 +33,7 @@ class CommentController extends Controller
             $request->all()
         );
 
-        return redirect('/posts/' . $comment->post->id . '#comments')
+        return redirect('/posts/' . $comment->post->slug . '#comments')
             ->with('flash', 'Pridali ste komentár!');
 	}
 

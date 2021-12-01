@@ -3,7 +3,7 @@
 
 	<header>
 		<h2 class="title">
-			<a href="/posts/{{ $post->id }}">
+			<a href="/posts/{{ $post->slug }}">
 				{{ $post->title }}
 			</a>
 		</h2>
@@ -17,7 +17,7 @@
 		<a href="/users/{{ $post->user->id }}" class="author">
 			@<strong>{{ $post->user->name }}</strong>
 		</a>
-		<a href="/posts/{{ $post->id }}#scroll-to-comments" class="comments">
+		<a href="/posts/{{ $post->slug }}#scroll-to-comments" class="comments">
 			{{ $post->comments->count() }}
 			<strong>{{ str_plural('comment', $post->comments->count() ) }}</strong>
 		</a>
